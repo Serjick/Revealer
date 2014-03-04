@@ -1,0 +1,7 @@
+{
+    "name": "imhonet/revealer",
+
+    "require": {
+        "nikic/php-parser": "0.9.*"
+    }
+}
