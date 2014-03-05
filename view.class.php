@@ -30,7 +30,7 @@
             <?php if ($method->getDeclaringClass()->getName() == $class->getName()) : ?>
                 /**
                 <?php foreach ($method->getParameters() as $param) : ?>
-                    * @param $<?= $param->getName() ?><?php if ($param->isOptional()) : ?> optional<?php endif ?>
+                    * @param<?php if ($param->isArray()) : ?> array<?php else : ?> mixed<?php endif ?> $<?= $param->getName() ?><?php if ($param->isOptional()) : ?> optional<?php endif ?>
 
                 <?php endforeach ?>
                  */
