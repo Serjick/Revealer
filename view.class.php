@@ -33,6 +33,7 @@
                     * @param<?php if ($param->isArray()) : ?> array<?php else : ?> mixed<?php endif ?> $<?= $param->getName() ?><?php if ($param->isOptional()) : ?> optional<?php endif ?>
 
                 <?php endforeach ?>
+                 * @return mixed
                  */
                 <?= implode(' ', Reflection::getModifierNames($method->getModifiers())) ?>
                 function <?= $method->getName() ?>(
